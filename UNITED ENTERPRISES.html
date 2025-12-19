@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNITED ENTERPRISES</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1606813902927-4e7c3cba301d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover no-repeat;
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(90deg,#065f46,#0f766e);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fde68a;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-170154c0c31c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover no-repeat;
+      color: white;
+      padding: 100px 30px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: 0;
+    }
+    .hero div, .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 { font-size: 42px; font-weight: bold; margin: 10px 0; }
+    .hero p { font-size: 20px; margin-top: 5px; }
+    .search-bar {
+      width: 100%;
+      max-width: 600px;
+      padding: 12px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      margin: -30px auto 50px;
+      display: block;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.9);
+    }
+    section {
+      padding: 50px 30px;
+      max-width: 1200px;
+      margin: auto;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      margin-bottom: 50px;
+    }
+    h2 { text-align: center; margin-bottom: 40px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+    }
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #dc2626;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 25px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      background: #065f46;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover { background: #047857; }
+    footer {
+      background: #065f46;
+      color: white;
+      text-align: center;
+      padding: 35px;
+      font-size: 14px;
+    }
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .contact-info a {
+      color: #065f46;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .contact-info a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-circle">U E</div>
+    <h1>UNITED ENTERPRISES</h1>
+  </div>
+  <nav>
+    <a href="#products">Shop</a>
+    <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div style="font-size:55px;font-weight:bold;">U E</div>
+  <h2>UNITED ENTERPRISES Online Store</h2>
+  <p>Watches • Necklaces • Rings (Male & Female)</p>
+</section>
+
+<input class="search-bar" type="text" placeholder="Search products..." />
+
+<section id="products">
+  <h2>Products</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="badge">SPECIAL</div>
+      <img src="https://images.unsplash.com/photo-1517430816045-df4b7de01c2d?auto=format&fit=crop&w=250&q=80" width="100%" />
+      <h3>Smart Watch</h3>
+      <p><del>$120.00</del> <strong>$99.00</strong></p>
+      <p>Stock: <strong>In Stock</strong></p>
+      <button onclick="addToCart('Smart Watch',99)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250" width="100%" />
+      <h3>Socks Pack</h3>
+      <p>$15.00</p>
+      <p>Stock: <strong>Low</strong></p>
+      <button onclick="addToCart('Socks Pack',15)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250" width="100%" />
+      <h3>EarPods</h3>
+      <p>$25.00</p>
+      <p>Stock: <strong>In Stock</strong></p>
+      <button onclick="addToCart('EarPods',25)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <p><strong>Subtotal: $<span id="total">0</span></strong></p>
+  <p>Delivery Fee: $<span id="delivery">2.00</span></p>
+  <p><strong>Grand Total: $<span id="grand">0</span></strong></p>
+  <button onclick="checkout()">Checkout via WhatsApp</button>
+  <p class="contact-info">Pay using EcoCash: <strong>+263 771 926 489</strong> | WhatsApp: <a href="https://wa.me/263771926489" target="_blank">+263 771 926 489</a></p>
+</section>
+
+<section id="admin">
+  <h2>Admin Panel</h2>
+  <p><strong>Login to add or update products</strong></p>
+  <input type="password" id="adminPass" placeholder="Enter admin password" />
+  <button onclick="loginAdmin()">Login</button>
+
+  <div id="adminArea" style="display:none;margin-top:20px;">
+    <h3>Add New Product</h3>
+    <input id="pName" placeholder="Product name" />
+    <input id="pPrice" type="number" placeholder="Price" />
+    <input id="pStock" placeholder="Stock status (In Stock / Low / Out)" />
+    <input id="pImage" placeholder="Image URL" />
+    <button onclick="addProduct()">Add Product</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>tinayelife@gmail.com</strong></p>
+  <p class="contact-info">WhatsApp: <a href="https://wa.me/263771926489" target="_blank">+263 771 926 489</a></p>
+</section>
+
+<footer>
+  <p>© 2025 UNITED ENTERPRISES. All rights reserved.</p>
+</footer>
+
+<script>
+  let cart = [];
+let total = 0;
+let products = [];
+
+function loginAdmin() {
+  const pass = document.getElementById('adminPass').value;
+  if (pass === 'life123') {
+    document.getElementById('adminArea').style.display = 'block';
+    alert('Admin access granted');
+  } else {
+    alert('Wrong password');
+  }
+}
+
+function addProduct() {
+  const name = document.getElementById('pName').value;
+  const price = parseFloat(document.getElementById('pPrice').value);
+  const stock = document.getElementById('pStock').value;
+  const img = document.getElementById('pImage').value || 'https://via.placeholder.com/250';
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <img src="${img}" width="100%" />
+    <h3>${name}</h3>
+    <p>$${price.toFixed(2)}</p>
+    <p>Stock: <strong>${stock}</strong></p>
+    <button onclick="addToCart('${name}',${price})">Add to Cart</button>
+  `;
+  document.querySelector('.cards').appendChild(card);
+
+  alert('Product added successfully');
+}
+
+function addToCart(product, price) {
+  cart.push(product + ' - $' + price);
+  total += price;
+  document.getElementById('total').innerText = total.toFixed(2);
+  document.getElementById('grand').innerText = (total + 2).toFixed(2);
+  const li = document.createElement('li');
+  li.textContent = product + ' - $' + price;
+  document.getElementById('cartItems').appendChild(li);
+}
+
+function checkout() {
+    let message = 'Hello UNITED ENTERPRISES, I want to order:%0A' + cart.join('%0A') + '%0ATotal: $' + total;
+    window.open('https://wa.me/263771926489?text=' + message, '_blank');
+  }
+</script>
+
+</body>
+</html>
